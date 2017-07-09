@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.mrknow"
        name="Filmy Online - mrknow.pl"
-       version="2017.03.29.2"
+       version="2017.07.09"
        provider-name="mrknow">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -18,8 +18,8 @@
     <summary>Wtyczka MRKNOW</summary>
     <description>Plugin pozwala nam ogladac filmy, telewizje, sport z polskich stron internetowych. Ikony do wtyczki dostarczył Michał Morawski email: mickpl[malpa]wp.pl. Więcej informacji na stronie http;//filmkodi.com </description>
     <platform>all</platform>
-    <forum>https://github.com/mrknow/filmkodi/issues</forum>
-	<source>http://filmkodi.com/repository/</source>
-    <website>http://filmkodi.com/pl/wtyczka-filmy-online-mrknow/</website>
+    <forum>https://github.com/svage96/filmkodi/issues</forum>
+	<source>https://github.com/svage96/filmkodi/</source>
+    <website>https://github.com/svage96/filmkodi/</website>
   </extension>
 </addon>
