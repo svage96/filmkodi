@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="repository.mrknowfixed" name="MRKNOW Fixed" version="2017.07.09" provider-name="MRKNOW">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="MRKNOW Fixed">
+            <info compressed="false">https://raw.githubusercontent.com/svage69/filmkodi/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/svage69/filmkodi/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/svage69/filmkodi/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Fixed repo for kodi</summary>
+            <description>This repo contains fixes for mrknow forked filmkodi repo</description>
+            <platform>all</platform>
+    </extension>
+</addon>
