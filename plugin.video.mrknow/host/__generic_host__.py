@@ -27,6 +27,7 @@ import urlresolver9 as urlresolver
 import requests
 import datetime
 from resources.lib.libraries import history
+from resources.lib import debrid
 
 __version__ = '0.0.0.1'
 
@@ -249,15 +250,19 @@ class GenericHost():
             url = 'http:' + url
 
         self.control.log('2 PLAYYYYYYERRRRRRRRRRRR %s ' % url)
-
-        hmf = urlresolver.HostedMediaFile(url=url, include_disabled=True, include_universal=False)
-        if hmf.valid_url() == True:
-            linkVideo = hmf.resolve()
-            #self.control.log('3 PLAYYYYYYERRRRRRRRRRRR [%s]' % linkVideo)
-        else:
-            self.control.log('3 PLAYYYYYYERRRRRRRRRRRR not valid ')
-        #if linkVideo == False:
-        #    linkVideo = self.up.getVideoLink(srcVideo, url)
+        
+        for debrider in debrid.debrid_resolvers:
+            linkVideo = debrid.resolver(url, debrider.name)
+            if linkVideo != '':
+                break
+        
+        if linkVideo == '':
+            hmf = urlresolver.HostedMediaFile(url=url, include_disabled=True, include_universal=False)
+            if hmf.valid_url() == True:
+                linkVideo = hmf.resolve() 
+            else:
+                self.control.log('3 PLAYYYYYYERRRRRRRRRRRR not valid ')
+                
         return linkVideo
 
     def handleService(self):
