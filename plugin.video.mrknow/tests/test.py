@@ -49,7 +49,7 @@ web_url = 'https://openload.co/embed/rZ04_L_uRuU'
 try:
     import urlresolver
 except:
-    import urlresolver9 as urlresolver
+    import urlresolver as urlresolver
 
 hmf = urlresolver.HostedMediaFile(url=web_url, include_disabled=True, include_universal=False)
 print "HMF",hmf

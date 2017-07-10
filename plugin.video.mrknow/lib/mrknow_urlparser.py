@@ -15,7 +15,7 @@ import httplib
 try:
     import urlresolver
 except:
-    import urlresolver9 as urlresolver
+    import urlresolver as urlresolver
 
 ptv = xbmcaddon.Addon()
 scriptID = 'plugin.video.mrknow'
